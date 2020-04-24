@@ -1,8 +1,6 @@
 import classNames from 'classnames'
 import _inRange from 'lodash/inRange'
 import _isEmpty from 'lodash/isEmpty'
-import _isFunction from 'lodash/isFunction'
-import _isNil from 'lodash/isNil'
 import PropTypes, { InferProps } from 'prop-types'
 import {
   AtSwipeActionProps,
@@ -32,7 +30,7 @@ export default class AtSwipeAction extends AtComponent<
   private startX: number
   private startY: number
   private maxOffsetSize: number
-  private domInfo: Taro.rectElement
+  private domInfo: any
   private isMoving: boolean
   private isTouching: boolean
 
@@ -202,7 +200,7 @@ export default class AtSwipeAction extends AtComponent<
   ): void => {
     const { onClick, autoClose } = this.props
 
-    if (_isFunction(onClick)) {
+    if (typeof onClick === 'function') {
       onClick(item, index, event)
     }
     if (autoClose) {
@@ -245,7 +243,7 @@ export default class AtSwipeAction extends AtComponent<
               <View
                 key={`${item.text}-${key}`}
                 style={item.style}
-                onClick={this.handleClick.bind(this, item, key)}
+                onClick={e => this.handleClick(item, key, e)}
                 className={classNames(
                   'at-swipe-action__option',
                   item.className
