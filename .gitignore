@@ -1,19 +1,30 @@
-dist/
+# Node modules
 node_modules/
 
+# Yarn and NPM files
 yarn-error.log
 package-lock.json
-project.config.json
 
+# Template files
 .temp
 .DS_Store
-.vscode
 .eslintcache
-.babelrc
 
+# Editor and IDE files
+.vscode
+.idea
+
+# Build outputs
+packages/taro-ui/lib/
+packages/**/dist/
+dist/
+
+# Docs outputs
 site/
 docs/h5/
 
-coverage
+# Rollup visualizer file
+stats.html
 
-.idea
+# Test files
+coverage
