@@ -177,13 +177,8 @@ export default class AtNoticebar extends React.Component<
             )}
             <View className='at-noticebar__content-text'>
               <View
-<<<<<<< HEAD:src/components/noticebar/index.tsx
-                // @ts-ignore
-                animation={this.state.animationData}
-=======
                 id={animElemId}
                 animation={animationData}
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui/src/components/noticebar/index.tsx
                 className={classNames(innerClassName)}
                 style={style}
               >
