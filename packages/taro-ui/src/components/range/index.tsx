@@ -104,11 +104,7 @@ export default class AtRange extends React.Component<
   }
 
   private updatePos(): void {
-<<<<<<< HEAD:src/components/range/index.tsx
-    delayQuerySelector(this, '.at-range__container', 30).then(rect => {
-=======
     delayQuerySelector('.at-range__container', 0).then(rect => {
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui/src/components/range/index.tsx
       this.width = Math.round(rect[0].width)
       this.left = Math.round(rect[0].left)
     })

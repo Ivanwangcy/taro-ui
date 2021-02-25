@@ -1,11 +1,7 @@
 import React from 'react'
 import { Picker, View } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
-<<<<<<< HEAD:src/pages/form/picker/index.tsx
-import { AtList, AtListItem } from 'taro-ui'
-=======
 import Taro from '@tarojs/taro'
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui-demo/src/pages/form/picker/index.tsx
 import DocsHeader from '../../components/doc-header'
 import './index.scss'
 
@@ -19,15 +15,11 @@ interface IndexState {
   isAlipay: boolean
 }
 
-<<<<<<< HEAD:src/pages/form/picker/index.tsx
-export default class Index extends Taro.Component<{}, IndexState> {
-=======
 export default class Index extends React.Component<{}, IndexState> {
   public config: Taro.PageConfig = {
     navigationBarTitleText: 'Taro UI'
   }
 
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui-demo/src/pages/form/picker/index.tsx
   public state: IndexState = {
     selector: ['中国', '美国', '巴西', '日本'],
     multiSelector: [
@@ -106,21 +98,12 @@ export default class Index extends React.Component<{}, IndexState> {
                   value={selectorValue}
                   onChange={this.handleChange}
                 >
-<<<<<<< HEAD:src/pages/form/picker/index.tsx
-                  <AtList>
-                    <AtListItem
-                      title='国家地区'
-                      extraText={selector[selectorValue]}
-                    />
-                  </AtList>
-=======
                   <View className='demo-list-item'>
                     <View className='demo-list-item__label'>国家地区</View>
                     <View className='demo-list-item__value'>
                       {selector[selectorValue]}
                     </View>
                   </View>
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui-demo/src/pages/form/picker/index.tsx
                 </Picker>
               </View>
             </View>
@@ -138,23 +121,12 @@ export default class Index extends React.Component<{}, IndexState> {
                     value={mulitSelectorValues}
                     onChange={this.handleMulitChange}
                   >
-<<<<<<< HEAD:src/pages/form/picker/index.tsx
-                    <AtList>
-                      <AtListItem
-                        title='请选择早餐'
-                        extraText={`${
-                          multiSelector[0][mulitSelectorValues[0]]
-                        } & ${multiSelector[1][mulitSelectorValues[1]]}`}
-                      />
-                    </AtList>
-=======
                     <View className='demo-list-item'>
                       <View className='demo-list-item__label'>请选择早餐</View>
                       <View className='demo-list-item__value'>{`${
                         multiSelector[0][mulitSelectorValues[0]]
                       } & ${multiSelector[1][mulitSelectorValues[1]]}`}</View>
                     </View>
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui-demo/src/pages/form/picker/index.tsx
                   </Picker>
                 </View>
               </View>
@@ -171,16 +143,10 @@ export default class Index extends React.Component<{}, IndexState> {
                   value={timeSel}
                   onChange={this.handleTimeChange}
                 >
-<<<<<<< HEAD:src/pages/form/picker/index.tsx
-                  <AtList>
-                    <AtListItem title='请选择时间' extraText={timeSel} />
-                  </AtList>
-=======
                   <View className='demo-list-item'>
                     <View className='demo-list-item__label'>请选择时间</View>
                     <View className='demo-list-item__value'>{timeSel}</View>
                   </View>
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui-demo/src/pages/form/picker/index.tsx
                 </Picker>
               </View>
             </View>
@@ -196,16 +162,10 @@ export default class Index extends React.Component<{}, IndexState> {
                   value={dateSel}
                   onChange={this.handleDateChange}
                 >
-<<<<<<< HEAD:src/pages/form/picker/index.tsx
-                  <AtList>
-                    <AtListItem title='请选择日期' extraText={dateSel} />
-                  </AtList>
-=======
                   <View className='demo-list-item'>
                     <View className='demo-list-item__label'>请选择日期</View>
                     <View className='demo-list-item__value'>{dateSel}</View>
                   </View>
->>>>>>> dc8c8cd662c306b903c5839f1d80eca99d5d1bbf:packages/taro-ui-demo/src/pages/form/picker/index.tsx
                 </Picker>
               </View>
             </View>
